@@ -1,0 +1,49 @@
+syntax = "proto3";
+package files.v1;
+option go_package = "content/v1;contentv1";
+
+service ContentService {
+    rpc Upload (stream UploadRequest) returns (UploadResponse);
+    rpc Download (DownloadRequest) returns (stream DownloadResponse);
+    rpc List (ListRequest) returns (ListResponse);
+}
+
+message UploadResponse {
+    string id = 1;
+    string file_name = 2;
+    int64 size = 3;
+    int64 created_at = 4;
+    string control_sum = 5;
+}
+
+message UploadRequest {
+    string file_name = 1;
+    bytes data = 2;
+}
+
+message DownloadResponse {
+    bytes data = 1;
+}
+
+message DownloadRequest {
+    string id = 1;
+}
+
+message ListRequest {
+    string indx = 1;
+    int64 count = 2;
+}
+
+message ListResponse {
+    string right_indx = 1;
+    repeated File item = 2;
+}
+
+message File {
+    string id = 1;
+    string file_name = 2;
+    int64 size = 3;
+    int64 created = 4;
+    int64 updated = 5;
+    string control_sum = 6;
+}
