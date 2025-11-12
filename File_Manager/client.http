@@ -1,0 +1,28 @@
+GET http://localhost:8080/api/list?path=
+
+###
+POST http://localhost:8080/api/mkdir
+Content-Type: application/json
+
+{
+  "path": ".",
+  "name": "test"
+}
+
+###
+GET http://localhost:8080/api/list?path=
+
+###
+GET http://localhost:8080/api/list?path=test
+
+###
+POST http://localhost:8080/api/delete
+Content-Type: application/json
+
+{
+  "path": ".",
+  "name": "test"
+}
+
+###
+GET http://localhost:8080/api/list?path=

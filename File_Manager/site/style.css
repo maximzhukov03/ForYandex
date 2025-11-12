@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 30px;
+  color: #222;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  font-family: inherit;
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #004cd8;
+}
+
+p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f2f5;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f3f6ff;
+}
+
+.dir {
+  font-weight: 600;
+  color: #0044aa;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions button {
+  background-color: #555;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.actions button:hover {
+  background-color: #333;
+}
+
+.actions button:first-child {
+  background-color: #0066ff;
+}
+
+.actions button:first-child:hover {
+  background-color: #004cd8;
+}
+
+.actions button:last-child {
+  background-color: #d33;
+}
+
+.actions button:last-child:hover {
+  background-color: #b22;
+}
